@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- MathJax for rendering LaTeX -->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script','noscript','style','textarea','pre']
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    <nav>
+      <a href="/README.md">خانه</a> |
+      <a href="/SYLLABUS.md">سرفصل</a> |
+      <a href="/lectures/">جلسات</a> |
+      <a href="/homework/">تمرین‌ها</a> |
+      <a href="/resources/">منابع</a> |
+      <a href="/glossary.md">واژه‌نامه</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© 2025 جبر خطی عددی · <a href="/LICENSE.md">مجوز</a> · <a href="/contact.md">تماس</a></p>
+  </footer>
+</body>
+</html>

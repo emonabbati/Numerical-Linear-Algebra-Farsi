@@ -1,0 +1,1 @@
+Place local video files here if you prefer to host them in the repo. Otherwise use YouTube embeds as shown in lectures.

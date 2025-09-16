@@ -1,0 +1,9 @@
+title: "جبر خطی عددی"
+description: "دوره دانشگاهی Numerical Linear Algebra (به زبان فارسی)"
+theme: minimal
+logo: /assets/images/logo.png
+show_downloads: false
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  input: GFM
