@@ -1,13 +1,16 @@
-
-
 body {
-  font-family: "Vazir", sans-serif;
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
   direction: rtl;
   margin: 0;
   padding: 0 1rem;
   background: #f9f9f9;
   color: #222;
 }
+
+
 header {
   background: #003366;
   color: white;
@@ -43,12 +46,7 @@ footer {
   border-radius: 12px 12px 0 0;
 }
 
-body {
-  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
-  direction: rtl;
-  text-align: right;
-  line-height: 1.8;
-}
+
 
 h1, h2, h3, h4, h5 {
   font-family: 'Vazirmatn', Tahoma, sans-serif;
