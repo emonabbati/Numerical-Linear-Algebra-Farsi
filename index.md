@@ -12,7 +12,7 @@ title: "صفحه اصلی"
 - [جلسات درسی (Lectures)](lectures/)
 - [تمرین‌ها (Homework)](homework/)
 - [منابع (Resources)](resources/)
-- [واژه‌نامه (Glossary)](glossary.md)
+- [واژه‌نامه (Glossary)](Numerical-Linear-Algebra-Farsi/glossary.md)
 - [تماس با مدرس](contact.md)
 
 ---
