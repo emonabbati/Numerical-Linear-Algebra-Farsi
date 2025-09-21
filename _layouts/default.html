@@ -2,43 +2,54 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- MathJax for rendering LaTeX -->
-  <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']]
-    },
-    options: {
-      skipHtmlTags: ['script','noscript','style','textarea','pre']
-    }
-  };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-    <nav>
-      <a href="/README.md">خانه</a> |
-      <a href="/SYLLABUS.md">سرفصل</a> |
-      <a href="/lectures/">جلسات</a> |
-      <a href="/homework/">تمرین‌ها</a> |
-      <a href="/resources/">منابع</a> |
-      <a href="/glossary.md">واژه‌نامه</a>
+  <div class="page-container">
+    <nav class="sidebar">
+      <h3>فهرست</h3>
+      <ul>
+        <li><a href="#intro">مقدمه</a></li>
+        <li><a href="#syllabus">سرفصل</a></li>
+        <li><a href="#lectures">درس‌ها</a></li>
+        <li><a href="#homework">تمرین‌ها</a></li>
+        <li><a href="#resources">منابع</a></li>
+        <li><a href="#contact">تماس</a></li>
+      </ul>
     </nav>
-  </header>
-
-  <main>
-    {{ content }}
-  </main>
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
 
   <footer>
-    <p>© 2025 جبر خطی عددی · <a href="/LICENSE.md">مجوز</a> · <a href="/contact.md">تماس</a></p>
+    <p>© 2025 جبر خطی عددی · <a href="LICENSE">مجوز</a> · <a href="#contact">تماس</a></p>
   </footer>
+
+  <script>
+    // Scroll spy
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".content h3 a[id]");
+      const navLinks = document.querySelectorAll(".sidebar a");
+      function onScroll() {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top + window.scrollY - 120;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", onScroll);
+      onScroll();
+    });
+  </script>
 </body>
 </html>
