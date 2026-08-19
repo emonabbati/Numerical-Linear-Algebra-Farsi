@@ -1,1 +1,265 @@
-Hello word!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conference Name 2027</title>
+    <style>
+        /* ----- Reset & base ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #f8fafc;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        /* ----- Typography ----- */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e9edf2;
+            padding-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 2px solid #e9edf2;
+            padding-bottom: 0.5rem;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ----- Sections ----- */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            background: #f1f4f9;
+            border-radius: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        .meta-grid span {
+            font-weight: 500;
+        }
+
+        .meta-grid .label {
+            color: #64748b;
+            font-weight: 400;
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* ----- Schedule ----- */
+        .schedule-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-time {
+            font-weight: 600;
+            min-width: 100px;
+            color: #0f172a;
+        }
+
+        .schedule-desc {
+            flex: 1;
+        }
+
+        /* ----- Speakers ----- */
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .speaker-card {
+            background: #f8fafc;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .speaker-card .name {
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .speaker-card .affiliation {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        /* ----- Footer ----- */
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e9edf2;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        /* ----- Responsive tweaks ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .meta-grid {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+            }
+            .schedule-item {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            .speaker-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HERO ===== -->
+        <h1>📢 Conference Name 2027</h1>
+        <div class="subtitle">
+            The Future of [Your Field] &bull; City, Country
+        </div>
+
+        <!-- ===== KEY INFO ===== -->
+        <div class="meta-grid">
+            <div>
+                <span class="label">📅 Dates</span>
+                <span>June 14–16, 2027</span>
+            </div>
+            <div>
+                <span class="label">📍 Venue</span>
+                <span>University Hall, Room 101</span>
+            </div>
+            <div>
+                <span class="label">📧 Contact</span>
+                <span><a href="mailto:conference@univ.edu">conference@univ.edu</a></span>
+            </div>
+            <div>
+                <span class="label">🔗 Website</span>
+                <span><a href="#">conf.univ.edu/2027</a></span>
+            </div>
+        </div>
+
+        <!-- ===== ABOUT ===== -->
+        <h2>About the Conference</h2>
+        <p>
+            This is a placeholder description. Replace this text with a brief overview of your conference:
+            its theme, goals, and why people should attend. You can also mention key topics, previous editions,
+            or any special highlights.
+        </p>
+
+        <!-- ===== SPEAKERS ===== -->
+        <h2>🎤 Confirmed Speakers</h2>
+        <div class="speaker-grid">
+            <div class="speaker-card">
+                <div class="name">Dr. Jane Smith</div>
+                <div class="affiliation">University of Technology</div>
+            </div>
+            <div class="speaker-card">
+                <div class="name">Prof. Alex Johnson</div>
+                <div class="affiliation">Research Institute</div>
+            </div>
+            <div class="speaker-card">
+                <div class="name">Dr. Maria Garcia</div>
+                <div class="affiliation">Innovation Lab</div>
+            </div>
+        </div>
+
+        <!-- ===== SCHEDULE ===== -->
+        <h2>📋 Schedule Overview</h2>
+
+        <div class="schedule-item">
+            <span class="schedule-time">Day 1 &bull; 9:00–10:30</span>
+            <span class="schedule-desc">Opening Keynote &mdash; <strong>Dr. Jane Smith</strong></span>
+        </div>
+        <div class="schedule-item">
+            <span class="schedule-time">Day 1 &bull; 11:00–12:30</span>
+            <span class="schedule-desc">Session A: Emerging Trends</span>
+        </div>
+        <div class="schedule-item">
+            <span class="schedule-time">Day 1 &bull; 14:00–15:30</span>
+            <span class="schedule-desc">Session B: Applied Research</span>
+        </div>
+        <div class="schedule-item">
+            <span class="schedule-time">Day 2 &bull; 9:00–10:30</span>
+            <span class="schedule-desc">Panel Discussion</span>
+        </div>
+        <div class="schedule-item">
+            <span class="schedule-time">Day 2 &bull; 11:00–12:30</span>
+            <span class="schedule-desc">Closing Remarks</span>
+        </div>
+
+        <!-- ===== REGISTRATION / CTA ===== -->
+        <h2>🎟️ Registration</h2>
+        <p>
+            Registration will open on <strong>January 15, 2027</strong>.
+            Early-bird rates are available until March 31.
+            <!-- For a real conference you'd link to a ticketing page: -->
+            <!-- <a href="https://example.com/register">Register here →</a> -->
+        </p>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer">
+            &copy; 2026 Conference Name &bull; Hosted by Your University
+        </div>
+
+    </div>
+
+</body>
+</html>
